@@ -21,17 +21,17 @@ def main():
         sys.exit(1)
 
     file_path = sys.argv[1]
-    _mode_ = sys.argv[2].lower()
+    mode = sys.argv[2].lower()
 
     if not os.path.exists(file_path):
         print(f"The specified path '{file_path}' does not exist.")
         sys.exit(1)
 
-    if _mode_ not in ["generic", "specific"]:
+    if mode not in ["generic", "specific"]:
         print("Invalid mode. Mode must be either 'generic' or 'specific'.")
         sys.exit(1)
 
-    if _mode_ == "specific":
+    if mode == "specific":
         print("The specific functionality is not available as yet. Running generic organization.")
 
     generic_organize(file_path)
